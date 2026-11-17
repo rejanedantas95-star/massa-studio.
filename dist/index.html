@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#172320" />
+  <meta name="description" content="Massa Studio: demonstração de um cardápio digital interativo com pedidos personalizados." />
+  <title>Massa Studio — Cardápio interativo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cinema.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="cinema-intro" id="cinema-intro" role="dialog" aria-modal="true" aria-label="Abertura cinematográfica" hidden>
+    <div class="intro-grain" aria-hidden="true"></div>
+    <div class="intro-frame" aria-hidden="true"></div>
+    <div class="intro-content">
+      <div class="intro-kicker">✳ &nbsp; MASSA STUDIO APRESENTA &nbsp; ✳</div>
+      <div class="intro-title"><span>O SABOR</span><span><em>ENTRA EM CENA.</em></span></div>
+      <div class="intro-subtitle">UMA EXPERIÊNCIA FEITA PARA SER SENTIDA.</div>
+      <div class="intro-progress"><span></span></div>
+    </div>
+    <div class="intro-showcase" id="intro-showcase" aria-hidden="true"></div>
+    <button type="button" class="intro-skip" id="skip-intro">Pular abertura <span aria-hidden="true">↗</span></button>
+    <span class="intro-corner">EST. MMXXVI</span>
+  </div>
+  <div class="announcement">Projeto demonstrativo · Experiência digital desenvolvida para portfólio</div>
+  <header class="site-header">
+    <a href="#inicio" class="brand" aria-label="Massa Studio, início">
+      <span class="brand-symbol" aria-hidden="true">✳</span>
+      <span><strong>Massa</strong><small>STUDIO</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#monte">Monte seu prato</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#como-funciona">Como funciona</a>
+    </nav>
+    <button type="button" class="cart-trigger" id="open-cart" aria-label="Abrir sacola de pedidos">
+      <span class="bag-icon" aria-hidden="true">◫</span>
+      <span>Sacola</span>
+      <span class="cart-count" id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <div class="scene-index"><span class="scene-led"></span> CENA 01 <span class="scene-separator">/</span> SUA HISTÓRIA COMEÇA AQUI</div>
+        <div class="eyebrow"><span class="eyebrow-line"></span> SABOR QUE TEM A SUA ASSINATURA</div>
+        <h1><span class="headline-row">O sabor</span><span class="headline-row"><em>entra em cena.</em></span></h1>
+        <p>Escolha a massa, encontre o molho perfeito, acrescente seus favoritos e monte uma experiência inteira em poucos toques.</p>
+        <div class="hero-actions">
+          <a href="#monte" class="btn btn-primary">Começar experiência <span aria-hidden="true">↗</span></a>
+          <a href="#cardapio" class="btn btn-ghost">Explorar cardápio <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-proof"><span class="proof-icon">✦</span> Preparado com carinho, escolhido por você.</div>
+        <button type="button" class="replay-intro" id="replay-intro">✳ &nbsp; REVER ABERTURA CINEMATOGRÁFICA <span aria-hidden="true">↻</span></button>
+        <a class="hero-scroll" href="#monte">DESLIZE PARA EXPLORAR <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-visual" aria-label="Galeria animada de massas">
+        <img class="hero-slide is-active" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=1100&q=85&fit=crop" alt="Massa com molho e ervas em prato rústico" />
+        <img class="hero-slide" src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=1100&q=85&fit=crop" alt="Massa italiana cremosa" aria-hidden="true" />
+        <img class="hero-slide" src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?w=1100&q=85&fit=crop" alt="Massa com molho especial" aria-hidden="true" />
+        <div class="hero-visual-overlay"></div>
+        <div class="hero-light-leak" aria-hidden="true"></div>
+        <div class="viewfinder viewfinder-top" aria-hidden="true"></div>
+        <div class="viewfinder viewfinder-bottom" aria-hidden="true"></div>
+        <div class="floating-note"><span>✳</span><div><strong>Feito por você</strong><small>Escolha cada detalhe</small></div></div>
+        <div class="hero-caption">PASTA · SAUCE · LOVE</div>
+        <div class="hero-frame-counter"><span id="frame-current">01</span> <span>/ 03</span></div>
+      </div>
+    </section>
+
+    <div class="cinema-ticker" aria-hidden="true"><div class="ticker-track">
+      <span>FEITO PARA SURPREENDER <i>✳</i> TODO SABOR CONTA UMA HISTÓRIA <i>✳</i> SEU PALADAR, SUA OBRA <i>✳</i></span>
+      <span>FEITO PARA SURPREENDER <i>✳</i> TODO SABOR CONTA UMA HISTÓRIA <i>✳</i> SEU PALADAR, SUA OBRA <i>✳</i></span>
+    </div></div>
+
+    <section class="promise-strip" aria-label="Diferenciais do cardápio">
+      <div><span>01</span><strong>Monte como quiser</strong><small>Dezenas de combinações</small></div>
+      <div><span>02</span><strong>Veja o total na hora</strong><small>Sem surpresas no pedido</small></div>
+      <div><span>03</span><strong>Finalize facilmente</strong><small>Pedido organizado para WhatsApp</small></div>
+    </section>
+
+    <section class="section builder-section" id="monte">
+      <div class="section-heading split">
+        <div>
+          <div class="eyebrow dark"><span class="eyebrow-line"></span> CRIE SUA COMBINAÇÃO</div>
+          <h2>O chef é <em>você.</em></h2>
+        </div>
+        <p>Quatro escolhas simples, infinitas possibilidades deliciosas.</p>
+      </div>
+
+      <div class="builder-layout">
+        <div class="builder-form">
+          <fieldset class="choice-group" id="size-group">
+            <legend><span class="step">01</span> Escolha o tamanho</legend>
+            <div class="size-grid" id="size-options"></div>
+          </fieldset>
+          <fieldset class="choice-group" id="pasta-group">
+            <legend><span class="step">02</span> Escolha a massa</legend>
+            <div class="choice-grid" id="pasta-options"></div>
+          </fieldset>
+          <fieldset class="choice-group" id="sauce-group">
+            <legend><span class="step">03</span> Escolha o molho</legend>
+            <div class="choice-grid" id="sauce-options"></div>
+          </fieldset>
+          <fieldset class="choice-group last" id="extra-group">
+            <legend><span class="step">04</span> Um toque especial? <small>Opcional</small></legend>
+            <div class="extras-grid" id="extra-options"></div>
+          </fieldset>
+        </div>
+
+        <aside class="order-preview" aria-label="Resumo da sua criação">
+          <div class="preview-image"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=850&q=85&fit=crop" alt="Prato de massa italiana" /><span class="preview-pill">Sua criação</span></div>
+          <div class="preview-body">
+            <span class="tiny-label">COMBINAÇÃO PERSONALIZADA</span>
+            <h3>La tua pasta <em>perfetta.</em></h3>
+            <p id="preview-description">Sua combinação está ficando deliciosa.</p>
+            <div class="preview-total"><span>Valor do prato</span><strong id="preview-price">R$ 0,00</strong></div>
+            <button type="button" class="btn btn-primary full" id="add-custom">Adicionar à sacola <span aria-hidden="true">↗</span></button>
+            <small class="preview-footnote">Os valores são demonstrativos. Não há cobrança nesta página.</small>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="cardapio">
+      <div class="section-heading centered">
+        <div class="eyebrow dark"><span class="eyebrow-line"></span> ESCOLHIDOS A DEDO</div>
+        <h2>Favoritos da <em>casa.</em></h2>
+        <p>Para os dias em que você só quer escolher e aproveitar.</p>
+      </div>
+      <div class="menu-tabs" id="menu-tabs" role="group" aria-label="Filtrar cardápio"></div>
+      <div class="menu-grid" id="menu-grid"></div>
+    </section>
+
+    <section class="how-section" id="como-funciona">
+      <div class="how-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> SIMPLES ASSIM</div>
+        <h2>Da escolha ao pedido, <em>sem complicar.</em></h2>
+        <p>Uma demonstração de como um cardápio digital pode ser bonito, intuitivo e prático para clientes e negócios.</p>
+      </div>
+      <div class="how-steps">
+        <div><span>1</span><div><strong>Escolha</strong><p>Monte seu prato ou explore os favoritos.</p></div></div>
+        <div><span>2</span><div><strong>Revise</strong><p>Confira itens, quantidades e valores na sacola.</p></div></div>
+        <div><span>3</span><div><strong>Envie</strong><p>Compartilhe um resumo completo pelo WhatsApp.</p></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#inicio" class="brand footer-brand"><span class="brand-symbol" aria-hidden="true">✳</span><span><strong>Massa</strong><small>STUDIO</small></span></a>
+    <div><strong>Design, experiência e uma pitada de criatividade.</strong><p>Projeto conceitual de cardápio digital · Portfólio de Rejane Dantas.</p></div>
+    <a href="#inicio" class="back-top">Voltar ao topo ↑</a>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="drawer-header"><div><span class="tiny-label">SEU PEDIDO</span><h2 id="cart-title">Minha sacola</h2></div><button type="button" class="icon-button" id="close-cart" aria-label="Fechar sacola">×</button></div>
+    <div class="cart-items" id="cart-items" aria-live="polite"></div>
+    <div class="drawer-footer">
+      <label for="order-note">Alguma observação?</label>
+      <textarea id="order-note" rows="2" maxlength="240" placeholder="Ex.: sem cebola, por favor."></textarea>
+      <div class="cart-subtotal"><span>Subtotal</span><strong id="cart-total">R$ 0,00</strong></div>
+      <button class="btn btn-primary full" id="checkout" type="button">Finalizar pedido <span aria-hidden="true">↗</span></button>
+      <p class="cart-disclaimer" id="cart-disclaimer">Demo sem cobrança. Configure um WhatsApp no código para ativar o envio.</p>
+    </div>
+  </aside>
+  <div class="product-backdrop" id="product-backdrop" hidden></div>
+  <section class="product-detail" id="product-detail" role="dialog" aria-modal="true" aria-labelledby="detail-title" aria-hidden="true" hidden>
+    <button type="button" class="modal-close" id="close-product" aria-label="Fechar detalhes">×</button>
+    <span class="product-detail-kicker">MASSA STUDIO • CLOSE-UP</span>
+    <button type="button" class="flip-product" id="flip-product" aria-label="Virar foto para conhecer o prato">
+      <span class="flip-inner">
+        <span class="flip-face flip-front">
+          <img id="detail-photo" src="" alt="" />
+          <span class="photo-overlay-label">01 / OLHE MAIS DE PERTO</span>
+        </span>
+        <span class="flip-face flip-back">
+          <span class="flip-back-kicker">POR QUE EXPERIMENTAR?</span>
+          <strong id="detail-title">O prato</strong>
+          <span id="detail-description"></span>
+          <span class="flip-story" id="detail-story"></span>
+          <span class="flip-back-signature">FEITO PARA SURPREENDER ✳</span>
+        </span>
+      </span>
+    </button>
+    <div class="product-detail-bottom">
+      <div><span id="detail-hint">Toque na imagem de novo para descobrir o que faz esse prato especial ↻</span><strong id="detail-price">R$ 0,00</strong></div>
+      <button type="button" class="btn btn-primary" id="detail-add">Quero esse prato <span aria-hidden="true">↗</span></button>
+    </div>
+  </section>
+
+  <div class="offer-backdrop" id="offer-backdrop" hidden></div>
+  <section class="offer-panel" id="offer-panel" role="dialog" aria-modal="true" aria-labelledby="offer-title" aria-hidden="true" hidden>
+    <button type="button" class="modal-close" id="close-offer" aria-label="Fechar sugestões">×</button>
+    <span class="offer-eyebrow">E AGORA... O PRÓXIMO ATO ✦</span>
+    <h2 id="offer-title">A experiência continua.</h2>
+    <p id="offer-description">Que tal completar seu pedido?</p>
+    <div class="offer-grid" id="offer-grid"></div>
+    <div class="offer-total"><span>SEU PEDIDO AGORA</span><strong id="offer-running-total">R$ 0,00</strong></div>
+    <div class="offer-footer"><button type="button" id="offer-continue">Ir para minha sacola <span aria-hidden="true">↗</span></button><small>Você decide. Nenhum item é adicionado automaticamente.</small></div>
+  </section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
