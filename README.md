@@ -1,58 +1,102 @@
-# Massa Studio 🍝
+<p align="center">
+  <img src="assets/massa-studio-cover.svg" alt="Massa Studio — O sabor entra em cena" width="100%" />
+</p>
 
-Cardápio digital interativo — projeto demonstrativo e autoral do portfólio de **Rejane Dantas**.
+<h1 align="center">Massa Studio 🍝</h1>
 
-Inspirado na experiência de montar um pedido em sites de restaurantes, mas com identidade visual, textos e funcionalidades próprios. Não possui vínculo com restaurantes reais.
+<p align="center">
+  <strong>Um cardápio que não começa com uma lista. Começa com uma experiência.</strong><br />
+  Protótipo autoral de cardápio digital com direção criativa cinematográfica, personalização e jornada de compra interativa.
+</p>
 
-## O que faz
+<p align="center">
+  <a href="https://massa-studio-rejane.peakedglade4.chatgpt.site"><strong>🎬 EXPERIMENTAR O CARDÁPIO</strong></a>
+  &nbsp; • &nbsp;
+  <a href="#o-conceito">O conceito</a>
+  &nbsp; • &nbsp;
+  <a href="#como-experimentar-localmente">Executar localmente</a>
+</p>
 
-- Cardápio adaptado para celular e desktop;
-- Abertura cinematográfica com fotografias que saltam para a tela, se organizam e se dispersam; botão para rever a cena;
-- Galeria em movimento e entrada suave dos produtos conforme a navegação;
-- Fotos ampliadas que viram para apresentar ingredientes e uma história do prato;
-- Montagem de massa por tamanho, tipo de massa, molho e adicionais;
-- Preço atualizado na hora;
-- Sugestões animadas de bebida e pão depois do prato, seguidas de sobremesa quando a bebida é escolhida;
-- Filtros de massas, acompanhamentos, bebidas e sobremesas;
-- Sacola com controle de quantidades e subtotal;
-- Persistência local da sacola no navegador;
-- Resumo do pedido para WhatsApp (ou cópia no modo demonstração);
-- Sem login, banco de dados, bibliotecas ou dependências de build.
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Projeto-autoral-234436?style=flat-square" alt="Projeto autoral" />
+</p>
 
-## Como abrir
+---
 
-Abra `dist/index.html` no navegador. Os arquivos `styles.css`, `cinema.css` e `app.js` precisam permanecer na mesma pasta que o HTML.
+## ✨ O conceito
 
-Para rodar com servidor local (opcional):
+E se escolher o jantar fosse tão envolvente quanto assistir à abertura de um filme?
+
+O **Massa Studio** nasceu dessa pergunta. Em vez de apresentar produtos de forma estática, o projeto convida a pessoa a descobrir cada prato, conhecer sua história e construir o pedido com liberdade. Cada animação tem uma intenção: **despertar curiosidade, facilitar a escolha e valorizar o produto**.
+
+É um laboratório de experiência digital pensado para restaurantes, mas com ideias que podem inspirar catálogos e vitrines interativas em outros segmentos.
+
+## 🎞️ Uma jornada em seis cenas
+
+| Cena | O que acontece | Por que existe |
+| --- | --- | --- |
+| **01 — Abertura** | Fotografias entram uma a uma, ocupam a tela e se dispersam. | Criar impacto e curiosidade logo no primeiro contato. |
+| **02 — Exploração** | Galeria em movimento e filtros por categoria. | Deixar a navegação convidativa e simples. |
+| **03 — Descoberta** | A foto amplia e, com outro toque, o cartão vira para contar a história do prato. | Dar contexto e valor à escolha. |
+| **04 — Personalização** | Tamanho, massa, molho e adicionais atualizam o preço na hora. | Dar autonomia e transparência ao cliente. |
+| **05 — Combinações** | Bebida e pão entram como sugestões; depois, a sobremesa. | Apresentar complementos no momento certo, sem obrigar a compra. |
+| **06 — Sacola** | Quantidades, observações e subtotal são organizados automaticamente. | Tornar o pedido fácil de revisar. |
+
+<p align="center">
+  <a href="https://massa-studio-rejane.peakedglade4.chatgpt.site"><strong>▶ Ver a experiência funcionando</strong></a>
+</p>
+
+## 🧩 Funcionalidades
+
+- Abertura cinematográfica com opção de **pular** ou **rever**;
+- Fotos interativas com efeito de ampliação e **virada 3D**;
+- Montagem de massas com **cálculo automático de valores**;
+- Sugestões de acompanhamentos, bebidas e sobremesas;
+- Cardápio com filtros por categoria;
+- Sacola com controle de quantidade, subtotal e observações;
+- Persistência da sacola no próprio navegador (`localStorage`);
+- Layout adaptado para telas pequenas e grandes, com respeito à preferência por movimento reduzido.
+
+## 🛠️ Como experimentar localmente
+
+Este é um projeto estático, sem instalação de dependências ou serviço de backend.
 
 ```bash
+git clone https://github.com/rejanedantas95-star/massa-studio..git massa-studio
+cd massa-studio
 python3 -m http.server 4173 --directory dist
 ```
 
-Depois, abra `http://localhost:4173`.
+Depois, abra `http://localhost:4173` no navegador. Também é possível abrir `dist/index.html` diretamente.
 
-## Como personalizar
+```text
+dist/
+├── index.html    # Estrutura do cardápio
+├── styles.css    # Identidade visual
+├── cinema.css    # Coreografia e efeitos
+└── app.js        # Produtos, interações e sacola
+```
 
-1. Em `app.js`, edite `CONFIG.brand` e `CONFIG.whatsapp` para o nome e número de WhatsApp do restaurante. Use apenas DDI, DDD e telefone (ex.: `5511999999999`).
-2. No mesmo arquivo, altere `SIZE_OPTIONS`, `PASTA_OPTIONS`, `SAUCE_OPTIONS` e `EXTRA_OPTIONS` para os tamanhos, molhos, adicionais e preços desejados.
-3. Edite a lista `MENU` com produtos e imagens próprios ou devidamente licenciados.
-4. Em `index.html`, `styles.css` e `cinema.css`, ajuste textos, cores, movimentos e logotipo.
+Para personalizar produtos, imagens e valores, edite a lista `MENU` em `dist/app.js`. Para ativar um destino de pedidos, configure `CONFIG.whatsapp` com o número de atendimento autorizado.
 
-> **Importante:** o WhatsApp está intencionalmente vazio. Enquanto não for configurado, o botão de finalizar copia o resumo do pedido e **não envia uma mensagem**. Não existem pagamentos reais ou processamento de pedidos no projeto.
+## 🎨 Autoria e processo criativo
 
-## Publicar com GitHub Pages
+**Rejane Dantas** — conceito, direção criativa, estrutura da experiência, definição de funcionalidades, testes e refinamento.
 
-1. Crie um repositório, por exemplo `massa-studio`.
-2. Copie os quatro arquivos de `dist/` (`index.html`, `app.js`, `styles.css` e `cinema.css`) para a raiz do repositório na branch `main`.
-3. Em **Settings → Pages**, escolha **Deploy from a branch → main → /(root)**.
-4. Aguarde o endereço fornecido pelo GitHub. A disponibilidade do GitHub Pages pode depender da visibilidade do repositório e do seu plano.
+O desenvolvimento foi realizado **com apoio de inteligência artificial**, a partir de orientações, decisões e validações da autora. O foco é transformar necessidades reais de atendimento e negócios em soluções digitais intuitivas, úteis e memoráveis.
 
-## Tecnologias
+## 📌 Sobre esta demonstração
 
-HTML5, CSS3, JavaScript puro, `localStorage` e link `wa.me`.
+O Massa Studio é um **projeto conceitual independente**, sem vínculo com restaurantes reais. Produtos, preços e combinações são demonstrativos. As fotografias ilustrativas são carregadas do Unsplash e devem ser substituídas por imagens licenciadas ou próprias antes do uso comercial.
 
-## Observações
+Não há cobrança, pagamento ou transmissão automática de pedidos. Sem um WhatsApp configurado, a finalização oferece um resumo para copiar.
 
-- Os produtos e preços são fictícios, usados exclusivamente na demonstração.
-- As fotos de demonstração são carregadas do Unsplash; para produção, substitua por fotos com direitos de uso adequados e preferencialmente hospedadas no próprio projeto.
-- O projeto não substitui um sistema de pagamento ou gestão de pedidos.
+---
+
+<p align="center">
+  <strong>Da ideia à experiência. Do primeiro toque à última cena.</strong><br />
+  © 2026 Rejane Dantas · Projeto autoral de portfólio.
+</p>
