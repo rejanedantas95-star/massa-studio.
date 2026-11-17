@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="470" viewBox="0 0 1400 470" role="img" aria-labelledby="title desc">
+  <title id="title">Massa Studio — O sabor entra em cena</title>
+  <desc id="desc">Capa editorial em verde profundo e dourado, com composição abstrata inspirada em uma massa italiana e moldura cinematográfica.</desc>
+  <defs>
+    <radialGradient id="background" cx="82%" cy="46%" r="85%">
+      <stop offset="0" stop-color="#31523f"/>
+      <stop offset=".48" stop-color="#182d23"/>
+      <stop offset="1" stop-color="#0b1913"/>
+    </radialGradient>
+    <radialGradient id="plate" cx="42%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#ede8d5"/>
+      <stop offset=".70" stop-color="#cec8ae"/>
+      <stop offset="1" stop-color="#7e927a"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop offset="0" stop-color="#f4d5a0"/>
+      <stop offset="1" stop-color="#c29358"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="18"/>
+      <feOffset dy="15"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".38"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="plateClip"><circle cx="1120" cy="234" r="147"/></clipPath>
+  </defs>
+
+  <rect width="1400" height="470" fill="url(#background)"/>
+  <g opacity=".055" stroke="#fff5db" stroke-width="1">
+    <path d="M0 46H1400M0 94H1400M0 142H1400M0 190H1400M0 238H1400M0 286H1400M0 334H1400M0 382H1400M0 430H1400"/>
+    <path d="M45 0V470M110 0V470M175 0V470M240 0V470M305 0V470M370 0V470M435 0V470M500 0V470M565 0V470M630 0V470M695 0V470M760 0V470M825 0V470M890 0V470M955 0V470M1020 0V470M1085 0V470M1150 0V470M1215 0V470M1280 0V470M1345 0V470"/>
+  </g>
+  <rect x="26" y="26" width="1348" height="418" rx="2" fill="none" stroke="#c8b486" stroke-opacity=".55"/>
+  <path d="M26 77V26H77M1323 26H1374V77M26 393V444H77M1323 444H1374V393" fill="none" stroke="#e5c78d" stroke-width="3"/>
+  <g fill="#d8c399" font-family="Arial, sans-serif" font-weight="700" letter-spacing="4">
+    <text x="81" y="89" font-size="14">✳  UMA EXPERIÊNCIA INTERATIVA</text>
+    <text x="82" y="413" font-size="11" opacity=".9">CONCEITO, DIREÇÃO CRIATIVA E EXPERIÊNCIA POR REJANE DANTAS</text>
+  </g>
+  <text x="74" y="244" fill="#fffaf0" font-family="Georgia, 'Times New Roman', serif" font-size="125" font-weight="700" letter-spacing="-10">MASSA</text>
+  <text x="82" y="313" fill="url(#gold)" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="74" letter-spacing="6">Studio</text>
+  <path d="M84 337H540" stroke="#d4ad78" stroke-width="2" opacity=".65"/>
+  <text x="83" y="376" fill="#e4e6d7" font-family="Arial, sans-serif" font-size="19" letter-spacing="1.7">O SABOR ENTRA EM CENA.</text>
+  <g opacity=".23" fill="none" stroke="#c9d7ad">
+    <circle cx="1120" cy="234" r="198" stroke-width="1.5" stroke-dasharray="2 16"/>
+    <circle cx="1120" cy="234" r="179" stroke-width="1"/>
+    <path d="M922 234H902M1318 234H1338M1120 36V18M1120 432V450" stroke-width="2"/>
+  </g>
+  <circle cx="1127" cy="248" r="156" fill="#020906" opacity=".35" filter="url(#shadow)"/>
+  <circle cx="1120" cy="234" r="166" fill="url(#plate)" stroke="#f7f0d9" stroke-opacity=".55" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="1120" cy="234" r="144" fill="#e8e2c7" stroke="#9ca98b" stroke-width="7"/>
+  <g clip-path="url(#plateClip)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1000 239C1042 137 1214 159 1209 235S1068 330 1030 264S1179 158 1211 208S1123 319 1073 261S1161 195 1182 245S1103 292 1081 238" stroke="#885a36" stroke-width="24" opacity=".23"/>
+    <path d="M998 226C1044 150 1219 174 1203 240S1062 325 1036 258S1178 171 1203 213S1117 304 1076 256S1162 199 1176 245S1110 288 1087 234" stroke="#d6a35b" stroke-width="21"/>
+    <path d="M1008 224C1058 160 1210 180 1198 238S1069 313 1047 255S1170 180 1198 217S1120 297 1087 254S1160 205 1170 244" stroke="#f2ce84" stroke-width="9"/>
+    <path d="M1019 268C1044 303 1109 312 1150 291M1041 205C1074 172 1153 168 1190 197M1077 229C1103 208 1146 208 1167 231" stroke="#f0c57c" stroke-width="12"/>
+  </g>
+  <g fill="#a94732" stroke="#e4b57b" stroke-width="3">
+    <circle cx="1029" cy="207" r="17"/><circle cx="1202" cy="267" r="20"/><circle cx="1098" cy="306" r="14"/>
+  </g>
+  <g fill="#557847" stroke="#294c32" stroke-width="2">
+    <path d="M1033 211Q994 184 991 156Q1029 163 1033 211Z"/>
+    <path d="M1033 211Q1057 165 1084 170Q1076 205 1033 211Z"/>
+    <path d="M1175 285Q1181 320 1213 330Q1226 297 1175 285Z"/>
+    <path d="M1175 285Q1133 295 1134 327Q1169 329 1175 285Z"/>
+  </g>
+  <g fill="#e0c28d" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">
+    <text x="1267" y="85">01 / 03</text>
+    <text x="1160" y="418">CLOSE-UP  ✳  SABOR</text>
+  </g>
+</svg>
